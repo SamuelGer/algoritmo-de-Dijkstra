@@ -2,10 +2,9 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from heapq import heappop, heappush
 
-# 1. Ativar o modo de fundo escuro global do Matplotlib
 plt.style.use('dark_background')
 
-# O seu dicionário de dados original
+# dicionário de dados original
 dados_grafo = {
     "A": {"B": 3, "C": 3},
     "B": {"A": 3, "D": 3.5, "E": 2.8},
@@ -18,7 +17,7 @@ dados_grafo = {
 
 class GrafoOtimizado: 
     def __init__(self, grafo: dict = None):
-        # Evita o problema de argumento mutável padrão do Python
+        # Evitando o problema de argumento mutável padrão do Python
         self.grafo = grafo if grafo is not None else {}
 
     def add_borda(self, nó1, nó2, peso):
